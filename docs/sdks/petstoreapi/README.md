@@ -1,0 +1,185 @@
+# PetStoreAPI SDK
+
+
+## Overview
+
+Pet Store API: A simple API for managing a pet store.
+
+### Available Operations
+
+* [deletePetsId](#deletepetsid) - Delete a pet by ID
+* [getPets](#getpets) - List all pets
+* [getPetsId](#getpetsid) - Get a pet by ID
+* [postPets](#postpets) - Add a new pet
+* [putPetsId](#putpetsid) - Update a pet by ID
+
+## deletePetsId
+
+Delete a pet by ID
+
+### Example Usage
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async() => {
+  const sdk = new PetStoreAPI();
+
+  const res = await sdk.petStoreAPI.deletePetsId({
+    id: 623531,
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `request`                                                                        | [operations.DeletePetsIdRequest](../../models/operations/deletepetsidrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+
+
+### Response
+
+**Promise<[operations.DeletePetsIdResponse](../../models/operations/deletepetsidresponse.md)>**
+
+
+## getPets
+
+List all pets
+
+### Example Usage
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async() => {
+  const sdk = new PetStoreAPI();
+
+  const res = await sdk.petStoreAPI.getPets();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.GetPetsResponse](../../models/operations/getpetsresponse.md)>**
+
+
+## getPetsId
+
+Get a pet by ID
+
+### Example Usage
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async() => {
+  const sdk = new PetStoreAPI();
+
+  const res = await sdk.petStoreAPI.getPetsId({
+    id: 524896,
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.GetPetsIdRequest](../../models/operations/getpetsidrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+
+
+### Response
+
+**Promise<[operations.GetPetsIdResponse](../../models/operations/getpetsidresponse.md)>**
+
+
+## postPets
+
+Add a new pet
+
+### Example Usage
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async() => {
+  const sdk = new PetStoreAPI();
+
+  const res = await sdk.petStoreAPI.postPets("U%p8E,M%#^" as bytes <<<>>>);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
+
+
+### Response
+
+**Promise<[operations.PostPetsResponse](../../models/operations/postpetsresponse.md)>**
+
+
+## putPetsId
+
+Update a pet by ID
+
+### Example Usage
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async() => {
+  const sdk = new PetStoreAPI();
+
+  const res = await sdk.petStoreAPI.putPetsId({
+    requestBody: "b@iZ+Fc{fj" as bytes <<<>>>,
+    id: 418284,
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `request`                                                                  | [operations.PutPetsIdRequest](../../models/operations/putpetsidrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+
+
+### Response
+
+**Promise<[operations.PutPetsIdResponse](../../models/operations/putpetsidresponse.md)>**
+

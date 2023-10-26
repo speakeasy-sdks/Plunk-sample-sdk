@@ -1,15 +1,28 @@
 configVersion: 1.0.0
+management:
+  docChecksum: de7104fd71da197855791d127f2a4d2e
+  docVersion: 1.0.0
+  speakeasyVersion: 1.108.0
+  generationVersion: 2.172.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/Plunk-sample-sdk.git
   sdkClassName: Pet-Store-API
   singleTagPerOp: false
   tagNamespacingDisabled: false
+features:
+  typescript:
+    core: 2.94.0
+    globalServerURLs: 2.82.0
 typescript:
-  version: 0.0.1
+  version: 0.1.0
   author: Plunk
   clientServerStatusCodesAsErrors: true
+  flattenGlobalSecurity: true
+  installationURL: https://github.com/speakeasy-sdks/Plunk-sample-sdk
   maxMethodParams: 0
   packageName: Pet-Store-API
+  repoSubDirectory: .
