@@ -23,8 +23,8 @@ src/sdk/models/operations/getpets.ts
 src/sdk/models/operations/getpetsid.ts
 src/sdk/models/operations/postpets.ts
 src/sdk/models/operations/putpetsid.ts
-src/sdk/models/operations/index.ts
 src/sdk/models/errors/index.ts
+src/sdk/models/operations/index.ts
 USAGE.md
 docs/models/operations/deletepetsidrequest.md
 docs/models/operations/deletepetsidresponse.md

@@ -25,9 +25,10 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async() => {
   const sdk = new PetStoreAPI();
 
-  const res = await sdk.petStoreAPI.deletePetsId({
+  const res = await sdk.deletePetsId({
     id: 623531,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,7 +61,8 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async() => {
   const sdk = new PetStoreAPI();
 
-  const res = await sdk.petStoreAPI.getPets();
+  const res = await sdk.getPets();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -92,9 +94,10 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async() => {
   const sdk = new PetStoreAPI();
 
-  const res = await sdk.petStoreAPI.getPetsId({
+  const res = await sdk.getPetsId({
     id: 524896,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -127,7 +130,8 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async() => {
   const sdk = new PetStoreAPI();
 
-  const res = await sdk.petStoreAPI.postPets("U%p8E,M%#^" as bytes <<<>>>);
+  const res = await sdk.postPets(new TextEncoder().encode("0xc1C582a00e"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -160,10 +164,11 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async() => {
   const sdk = new PetStoreAPI();
 
-  const res = await sdk.petStoreAPI.putPetsId({
-    requestBody: "b@iZ+Fc{fj" as bytes <<<>>>,
+  const res = await sdk.putPetsId({
+    requestBody: new TextEncoder().encode("0xf7Bd28fFAB"),
     id: 418284,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -15,15 +15,15 @@ It has been generated successfully based on your OpenAPI spec. However, it is no
 - [ ] 🎁 Publish your SDK to package managers by [configuring automatic publishing](https://www.speakeasyapi.dev/docs/productionize-sdks/publish-sdks)
 - [ ] ✨ When ready to productionize, delete this section from the README
 <!-- Start SDK Installation -->
-# SDK Installation
+## SDK Installation
 
-## NPM
+### NPM
 
 ```bash
 npm add https://github.com/speakeasy-sdks/Plunk-sample-sdk
 ```
 
-## Yarn
+### Yarn
 
 ```bash
 yarn add https://github.com/speakeasy-sdks/Plunk-sample-sdk
@@ -32,15 +32,13 @@ yarn add https://github.com/speakeasy-sdks/Plunk-sample-sdk
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
 (async () => {
     const sdk = new PetStoreAPI();
 
-    const res = await sdk.petStoreAPI.deletePetsId({
+    const res = await sdk.deletePetsId({
         id: 623531,
     });
 
@@ -53,9 +51,9 @@ import { PetStoreAPI } from "Pet-Store-API";
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-# Available Resources and Operations
+## Available Resources and Operations
 
-## [PetStoreAPI SDK](docs/sdks/petstoreapi/README.md)
+### [PetStoreAPI SDK](docs/sdks/petstoreapi/README.md)
 
 * [deletePetsId](docs/sdks/petstoreapi/README.md#deletepetsid) - Delete a pet by ID
 * [getPets](docs/sdks/petstoreapi/README.md#getpets) - List all pets
@@ -66,16 +64,12 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 <!-- Start Dev Containers -->
 
-
-
 <!-- End Dev Containers -->
 
 <!-- Start Error Handling -->
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or throw an error.  If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
-
-
 <!-- End Error Handling -->
 
 <!-- Start Custom HTTP Client -->
@@ -97,9 +91,66 @@ const httpClient = axios.create({
 
 const sdk = new PetStoreAPI({defaultClient: httpClient});
 ```
-
-
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://api.petstore.com/v1` | None |
+
+For example:
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async () => {
+    const sdk = new PetStoreAPI({
+        serverIdx: 0,
+    });
+
+    const res = await sdk.deletePetsId({
+        id: 623531,
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+
+```typescript
+import { PetStoreAPI } from "Pet-Store-API";
+
+(async () => {
+    const sdk = new PetStoreAPI({
+        serverURL: "https://api.petstore.com/v1",
+    });
+
+    const res = await sdk.deletePetsId({
+        id: 623531,
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+})();
+
+```
+<!-- End Server Selection -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

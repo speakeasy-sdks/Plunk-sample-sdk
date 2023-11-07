@@ -7,7 +7,7 @@ import { PetStoreAPI } from "Pet-Store-API";
 (async () => {
     const sdk = new PetStoreAPI();
 
-    const res = await sdk.petStoreAPI.deletePetsId({
+    const res = await sdk.deletePetsId({
         id: 623531,
     });
 
