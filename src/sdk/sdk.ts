@@ -43,9 +43,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.2.0";
-    genVersion = "2.181.1";
-    userAgent = "speakeasy-sdk/typescript 0.2.0 2.181.1 1.0.0 Pet-Store-API";
+    sdkVersion = "0.2.1";
+    genVersion = "2.185.0";
+    userAgent = "speakeasy-sdk/typescript 0.2.1 2.185.0 1.0.0 Pet-Store-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -66,7 +66,7 @@ export class PetStoreAPI {
             serverURL = ServerList[serverIdx];
         }
 
-        const defaultClient = props?.defaultClient ?? axios.create({ baseURL: serverURL });
+        const defaultClient = props?.defaultClient ?? axios.create();
         this.sdkConfiguration = new SDKConfiguration({
             defaultClient: defaultClient,
             serverURL: serverURL,
@@ -89,7 +89,7 @@ export class PetStoreAPI {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pets/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pets/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -98,7 +98,7 @@ export class PetStoreAPI {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -140,7 +140,7 @@ export class PetStoreAPI {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pets";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pets";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -149,7 +149,7 @@ export class PetStoreAPI {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -198,7 +198,7 @@ export class PetStoreAPI {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pets/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pets/{id}", req);
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         const headers: RawAxiosRequestHeaders = { ...config?.headers };
         headers["Accept"] = "*/*";
@@ -207,7 +207,7 @@ export class PetStoreAPI {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -252,7 +252,7 @@ export class PetStoreAPI {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/pets";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/pets";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -272,7 +272,7 @@ export class PetStoreAPI {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -322,7 +322,7 @@ export class PetStoreAPI {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/pets/{id}", req);
+        const operationUrl: string = utils.generateURL(baseURL, "/pets/{id}", req);
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -342,7 +342,7 @@ export class PetStoreAPI {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

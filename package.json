@@ -1,6 +1,6 @@
 {
   "name": "Pet-Store-API",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Plunk",
   "scripts": {
     "prepare": "tsc --build",

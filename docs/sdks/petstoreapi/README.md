@@ -29,7 +29,6 @@ import { PetStoreAPI } from "Pet-Store-API";
     id: 623531,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -38,16 +37,20 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `request`                                                                        | [operations.DeletePetsIdRequest](../../models/operations/deletepetsidrequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `config`                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                     | :heavy_minus_sign:                                                               | Available config options for making requests.                                    |
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `request`                                                                            | [operations.DeletePetsIdRequest](../../sdk/models/operations/deletepetsidrequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+| `config`                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                         | :heavy_minus_sign:                                                                   | Available config options for making requests.                                        |
 
 
 ### Response
 
-**Promise<[operations.DeletePetsIdResponse](../../models/operations/deletepetsidresponse.md)>**
+**Promise<[operations.DeletePetsIdResponse](../../sdk/models/operations/deletepetsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPets
 
@@ -62,7 +65,6 @@ import { PetStoreAPI } from "Pet-Store-API";
   const sdk = new PetStoreAPI();
 
   const res = await sdk.getPets();
-
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,8 +81,12 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 ### Response
 
-**Promise<[operations.GetPetsResponse](../../models/operations/getpetsresponse.md)>**
+**Promise<[operations.GetPetsResponse](../../sdk/models/operations/getpetsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## getPetsId
 
@@ -98,7 +104,6 @@ import { PetStoreAPI } from "Pet-Store-API";
     id: 524896,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -107,16 +112,20 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [operations.GetPetsIdRequest](../../models/operations/getpetsidrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.GetPetsIdRequest](../../sdk/models/operations/getpetsidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.GetPetsIdResponse](../../models/operations/getpetsidresponse.md)>**
+**Promise<[operations.GetPetsIdResponse](../../sdk/models/operations/getpetsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## postPets
 
@@ -132,7 +141,6 @@ import { PetStoreAPI } from "Pet-Store-API";
 
   const res = await sdk.postPets(new TextEncoder().encode("0xc1C582a00e"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -143,14 +151,18 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.PostPetsResponse](../../models/operations/postpetsresponse.md)>**
+**Promise<[operations.PostPetsResponse](../../sdk/models/operations/postpetsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## putPetsId
 
@@ -169,7 +181,6 @@ import { PetStoreAPI } from "Pet-Store-API";
     id: 418284,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -178,13 +189,17 @@ import { PetStoreAPI } from "Pet-Store-API";
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `request`                                                                  | [operations.PutPetsIdRequest](../../models/operations/putpetsidrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `config`                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)               | :heavy_minus_sign:                                                         | Available config options for making requests.                              |
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `request`                                                                      | [operations.PutPetsIdRequest](../../sdk/models/operations/putpetsidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
 
 
 ### Response
 
-**Promise<[operations.PutPetsIdResponse](../../models/operations/putpetsidresponse.md)>**
+**Promise<[operations.PutPetsIdResponse](../../sdk/models/operations/putpetsidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
