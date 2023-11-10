@@ -43,9 +43,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "1.0.0";
-    sdkVersion = "0.2.1";
-    genVersion = "2.185.0";
-    userAgent = "speakeasy-sdk/typescript 0.2.1 2.185.0 1.0.0 Pet-Store-API";
+    sdkVersion = "0.2.2";
+    genVersion = "2.187.7";
+    userAgent = "speakeasy-sdk/typescript 0.2.2 2.187.7 1.0.0 Pet-Store-API";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
@@ -105,7 +105,7 @@ export class PetStoreAPI {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -113,7 +113,7 @@ export class PetStoreAPI {
 
         const res: operations.DeletePetsIdResponse = new operations.DeletePetsIdResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -156,7 +156,7 @@ export class PetStoreAPI {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -164,7 +164,7 @@ export class PetStoreAPI {
 
         const res: operations.GetPetsResponse = new operations.GetPetsResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -214,7 +214,7 @@ export class PetStoreAPI {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -222,7 +222,7 @@ export class PetStoreAPI {
 
         const res: operations.GetPetsIdResponse = new operations.GetPetsIdResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -280,7 +280,7 @@ export class PetStoreAPI {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -288,7 +288,7 @@ export class PetStoreAPI {
 
         const res: operations.PostPetsResponse = new operations.PostPetsResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {
@@ -350,7 +350,7 @@ export class PetStoreAPI {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -358,7 +358,7 @@ export class PetStoreAPI {
 
         const res: operations.PutPetsIdResponse = new operations.PutPetsIdResponse({
             statusCode: httpRes.status,
-            contentType: contentType,
+            contentType: responseContentType,
             rawResponse: httpRes,
         });
         switch (true) {

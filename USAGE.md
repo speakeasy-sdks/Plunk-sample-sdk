@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
