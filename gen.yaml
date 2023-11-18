@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: de7104fd71da197855791d127f2a4d2e
   docVersion: 1.0.0
-  speakeasyVersion: 1.120.3
-  generationVersion: 2.192.1
+  speakeasyVersion: 1.121.1
+  generationVersion: 2.194.1
 generation:
   comments: {}
   sdkClassName: Pet-Store-API
@@ -13,9 +13,9 @@ generation:
 features:
   typescript:
     core: 3.1.4
-    globalServerURLs: 2.82.0
+    globalServerURLs: 2.82.1
 typescript:
-  version: 0.2.3
+  version: 0.2.4
   author: Plunk
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
