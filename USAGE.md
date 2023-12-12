@@ -1,8 +1,8 @@
-<!-- Start SDK Example Usage -->
+<!-- Start SDK Example Usage [usage] -->
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async () => {
+async function run() {
     const sdk = new PetStoreAPI();
 
     const res = await sdk.deletePetsId({
@@ -12,7 +12,9 @@ import { PetStoreAPI } from "Pet-Store-API";
     if (res.statusCode == 200) {
         // handle response
     }
-})();
+}
+
+run();
 
 ```
-<!-- End SDK Example Usage -->
+<!-- End SDK Example Usage [usage] -->

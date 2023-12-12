@@ -22,7 +22,7 @@ Delete a pet by ID
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async() => {
+async function run() {
   const sdk = new PetStoreAPI();
 
   const res = await sdk.deletePetsId({
@@ -32,7 +32,9 @@ import { PetStoreAPI } from "Pet-Store-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,7 +63,7 @@ List all pets
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async() => {
+async function run() {
   const sdk = new PetStoreAPI();
 
   const res = await sdk.getPets();
@@ -69,7 +71,9 @@ import { PetStoreAPI } from "Pet-Store-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -97,7 +101,7 @@ Get a pet by ID
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async() => {
+async function run() {
   const sdk = new PetStoreAPI();
 
   const res = await sdk.getPetsId({
@@ -107,7 +111,9 @@ import { PetStoreAPI } from "Pet-Store-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -136,7 +142,7 @@ Add a new pet
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async() => {
+async function run() {
   const sdk = new PetStoreAPI();
 
   const res = await sdk.postPets(new TextEncoder().encode("0xc1C582a00e"));
@@ -144,7 +150,9 @@ import { PetStoreAPI } from "Pet-Store-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -173,7 +181,7 @@ Update a pet by ID
 ```typescript
 import { PetStoreAPI } from "Pet-Store-API";
 
-(async() => {
+async function run() {
   const sdk = new PetStoreAPI();
 
   const res = await sdk.putPetsId({
@@ -184,7 +192,9 @@ import { PetStoreAPI } from "Pet-Store-API";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

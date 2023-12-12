@@ -25,7 +25,6 @@ src/sdk/models/operations/postpets.ts
 src/sdk/models/operations/putpetsid.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
-USAGE.md
 docs/sdk/models/operations/deletepetsidrequest.md
 docs/sdk/models/operations/deletepetsidresponse.md
 docs/sdk/models/operations/getpetsresponse.md
@@ -35,4 +34,5 @@ docs/sdk/models/operations/postpetsresponse.md
 docs/sdk/models/operations/putpetsidrequest.md
 docs/sdk/models/operations/putpetsidresponse.md
 docs/sdks/petstoreapi/README.md
+USAGE.md
 .gitattributes
