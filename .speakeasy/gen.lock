@@ -1,0 +1,55 @@
+lockVersion: 2.0.0
+id: c1832edb-c0c1-47c6-be29-2c09beb96e28
+management:
+  docChecksum: de7104fd71da197855791d127f2a4d2e
+  docVersion: 1.0.0
+  speakeasyVersion: internal
+  generationVersion: 2.225.2
+  releaseVersion: 0.3.1
+  configChecksum: e057620925083e94a3fbe57e6ed3e8b3
+  repoURL: https://github.com/speakeasy-sdks/Plunk-sample-sdk.git
+  repoSubDirectory: .
+  installationURL: https://github.com/speakeasy-sdks/Plunk-sample-sdk
+features:
+  typescript:
+    core: 3.4.1
+    globalServerURLs: 2.82.1
+generatedFiles:
+  - src/sdk/sdk.ts
+  - .eslintrc.yml
+  - jest.config.js
+  - package-lock.json
+  - package.json
+  - src/index.ts
+  - src/internal/utils/contenttype.ts
+  - src/internal/utils/headers.ts
+  - src/internal/utils/index.ts
+  - src/internal/utils/pathparams.ts
+  - src/internal/utils/queryparams.ts
+  - src/internal/utils/requestbody.ts
+  - src/internal/utils/retries.ts
+  - src/internal/utils/security.ts
+  - src/internal/utils/utils.ts
+  - src/sdk/index.ts
+  - src/sdk/models/errors/sdkerror.ts
+  - src/sdk/types/index.ts
+  - src/sdk/types/rfcdate.ts
+  - tsconfig.json
+  - src/sdk/models/operations/deletepetsid.ts
+  - src/sdk/models/operations/getpets.ts
+  - src/sdk/models/operations/getpetsid.ts
+  - src/sdk/models/operations/postpets.ts
+  - src/sdk/models/operations/putpetsid.ts
+  - src/sdk/models/errors/index.ts
+  - src/sdk/models/operations/index.ts
+  - docs/sdk/models/operations/deletepetsidrequest.md
+  - docs/sdk/models/operations/deletepetsidresponse.md
+  - docs/sdk/models/operations/getpetsresponse.md
+  - docs/sdk/models/operations/getpetsidrequest.md
+  - docs/sdk/models/operations/getpetsidresponse.md
+  - docs/sdk/models/operations/postpetsresponse.md
+  - docs/sdk/models/operations/putpetsidrequest.md
+  - docs/sdk/models/operations/putpetsidresponse.md
+  - docs/sdks/petstoreapi/README.md
+  - USAGE.md
+  - .gitattributes
